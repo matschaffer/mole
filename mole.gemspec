@@ -8,13 +8,13 @@ Gem::Specification.new do |s|
   s.email       = 'code@onixconsulting.co.uk'
   s.files       = [
     'bin/demo.yaml',
-    'bin/tbm.rb',
     'lib/mole/commands.rb',
     'lib/mole/config.rb',
     'lib/mole.rb',
     'LICENSE',
     'README.md'
   ]
+  s.executables << 'tbm.rb'
   s.homepage    = 'https://github.com/brahman81/mole'
   s.license       = 'GPLv3'
 end
