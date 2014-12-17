@@ -19,7 +19,7 @@
 module Mole::Commands
     # create an ssh tunnel
     def self.create(ssh,local_port,remote_port,dst_host,src_host)
-        pid = Process.spawn("#{ssh} -TNL #{local_port}:#{dst_host}:#{remote_port} #{src_host}") and puts "info: bored through #{src_host} to #{dst_host}"
+        pid = Process.spawn("#{ssh} -o ControlMaster=no -TNL #{local_port}:#{dst_host}:#{remote_port} #{src_host}") and puts "info: bored through #{src_host} to #{dst_host}"
         return pid
     end
 end
